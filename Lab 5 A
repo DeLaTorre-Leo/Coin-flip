@@ -1,0 +1,59 @@
+//
+//  main.cpp
+//  Lab 5 part c
+//
+//  Created by Leo De La Torre on 11/13/18.
+//  Copyright © 2018 Leo De La Torre. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+#include <cmath>
+#include <iomanip>
+void flip(){
+    int rand();
+    int heads=0,tails=0;
+    double win=0.00;
+    for(int x=1;x<=10;x++){
+    if(((rand()%2)+1)==1){
+        cout<<"\nHEADS";
+        heads++;
+        win++;
+    }
+    else{
+        cout<<"\nTAILS";
+        tails++;
+        win--;
+    }
+    }
+    cout<<"\nTotal Heads: "<<heads;
+    cout<<"\nTotal Tails: "<<tails;
+    cout<<"\nTotal winnings: "<<win;
+}
+void cars(){
+    double car[4],charge[3],totalC=0.00,totalH=0.00;
+    cout<<"\nEnter the hours parked for three cars: ";
+    cin>>car[1]>>car[2]>>car[3];
+    cout<<"\nCar"<<setw(10)<<"Hours"<<setw(10)<<"Charge";
+    for(int x = 1 ;x <= 3; x++){
+    if(car[x]<=3)
+        charge[x]=2.00;
+    else if(car[x]>=24)
+        charge[x]=10.00;
+    else
+        charge[x] = (2.00+((car[x]-3)*.50));
+    }
+    for(int x = 1 ;x <= 3; x++){
+        totalC+=charge[x];
+        totalH+=car[x];
+    }
+    for(int x = 1 ;x <= 3; x++){
+        cout<<"\n"<<x<<setw(10)<<car[x]<<setw(10)<<charge[x];
+    }
+        cout<<"\nTOTAL"<<setw(10)<<totalH<<setw(10)<<totalC;
+}
+int main() {
+    flip();
+    cars();
+    
+}
