@@ -21,7 +21,7 @@ void flip(){
         win++;
     }
     else{
-        cout<<"\nTAILS"
+        cout<<"\nTAILS";
         tails++;
         win--;
     }
